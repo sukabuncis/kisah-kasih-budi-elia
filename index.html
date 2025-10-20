@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kisah Kasih Budi & Elia</title>
+
+  <!-- Import Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* === Reset & Font Dasar === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('home 1.jpg') no-repeat center center/cover;
+      min-height: 100vh;
+      color: #444;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* === Lapisan pastel lembut === */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(255, 210, 230, 0.4), rgba(255, 255, 255, 0.3));
+      backdrop-filter: blur(3px);
+      z-index: 0;
+    }
+
+    /* === Navbar === */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
+      padding: 15px 50px;
+      border-bottom: 2px solid rgba(255, 182, 193, 0.4);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+
+    /* === Logo === */
+    .logo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: #ff7fa7;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #705779;
+    }
+
+    /* === Link Menu === */
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #705779;
+      margin: 0 18px;
+      font-weight: 600;
+      position: relative;
+      transition: color 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #ff7fa7;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ff7fa7;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* === Konten utama === */
+    .content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      margin: auto;
+      padding: 120px 15px 80px;
+    }
+
+    .content h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.35);
+      line-height: 1.2;
+    }
+
+    .content h2 {
+      margin-top: 15px;
+      font-size: 1.8rem;
+      color: #fff;
+      font-weight: 400;
+      font-family: 'Great Vibes', cursive;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    /* === Tombol === */
+    .btn {
+      margin-top: 40px;
+      background-color: #ffc6d9;
+      color: #705779;
+      padding: 12px 28px;
+      border-radius: 30px;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+    }
+
+    .btn:hover {
+      background-color: #ff9ebf;
+      transform: scale(1.05);
+    }
+
+    /* === Footer === */
+    .footer {
+      position: relative;
+      width: 100%;
+      text-align: center;
+      padding: 15px 10px;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(8px);
+      color: #705779;
+      font-size: 0.95rem;
+      border-top: 2px solid rgba(255, 182, 193, 0.3);
+      z-index: 2;
+    }
+
+    .footer strong {
+      color: #ff7fa7;
+    }
+
+    /* === Responsif Tablet === */
+    @media (max-width: 1024px) {
+      .navbar {
+        padding: 12px 30px;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+      }
+
+      .nav-links a {
+        margin: 0 12px;
+      }
+
+      .content h1 {
+        font-size: 3.2rem;
+      }
+
+      .content h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* === Responsif HP === */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px 15px;
+        border-radius: 0 0 30px 30px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .logo {
+        font-size: 1.7rem;
+      }
+
+      .nav-links a {
+        margin: 6px 10px;
+        font-size: 0.9rem;
+      }
+
+      .content {
+        padding-top: 140px;
+      }
+
+      .content h1 {
+        font-size: 2.4rem;
+      }
+
+      .content h2 {
+        font-size: 1.2rem;
+      }
+
+      .btn {
+        font-size: 0.9rem;
+        padding: 10px 24px;
+      }
+
+      .footer {
+        font-size: 0.85rem;
+        padding: 12px;
+      }
+    }
+
+    /* === HP kecil === */
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 1.5rem;
+      }
+
+      .content h1 {
+        font-size: 2rem;
+      }
+
+      .content h2 {
+        font-size: 1rem;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- === Navbar === -->
+  <nav class="navbar">
+    <div class="logo">Budi & Elia</div>
+    <div class="nav-links">
+      <a href="index.html">Beranda</a>
+      <a href="galeri.html">Galeri Kenangan</a>
+      <a href="pesan.html">Pesan Cinta</a>
+      <a href="tentang.html">Tentang Kami</a>
+    </div>
+  </nav>
+
+  <!-- === Konten utama === -->
+  <main class="content">
+    <h1>Budi Utomo</h1>
+    <h1>&</h1>
+    <h1>Elia Natalia Putri Santoso</h1>
+    <h2>Selamanya Dalam Cinta</h2>
+
+    <button class="btn" onclick="window.location.href='cerita.html'">
+      <strong>Lihat Kisah Kami</strong>
+    </button>
+  </main>
+
+  <!-- === Footer === -->
+  <footer class="footer">
+    <p>Dibuat dengan penuh cinta oleh <strong>Budi Utomo</strong> & <strong>Elia Natalia Putri Santoso</strong></p>
+    <p>© 2025 Kisah Kasih Kami | Selamanya Dalam Cinta</p>
+  </footer>
+</body>
+</html>

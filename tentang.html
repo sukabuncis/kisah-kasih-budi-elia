@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kisah Kasih Budi & Elia</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('love-bg3.jpg') no-repeat center center/cover;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: #444;
+      position: relative;
+      padding-top: 120px;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 216, 234, 0.65);
+      backdrop-filter: blur(3px);
+      z-index: 0;
+    }
+
+    /* =============================== */
+    /* NAVBAR */
+    /* =============================== */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
+      padding: 15px 50px;
+      border-bottom: 2px solid rgba(255, 182, 193, 0.4);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+
+    .logo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: #ff7fa7;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #705779;
+      margin: 0 18px;
+      font-weight: 600;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #ff7fa7;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ff7fa7;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links a.active {
+      color: #ff7fa7;
+    }
+
+    /* =============================== */
+    /* JUDUL */
+    /* =============================== */
+    .title {
+      text-align: center;
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+      margin-top: 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* =============================== */
+    /* KONTEN UTAMA */
+    /* =============================== */
+    .about-container {
+      max-width: 1000px;
+      margin: 50px auto 100px;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(5px);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
+    }
+
+    .about-images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .about-images img {
+      width: 230px;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .about-images img:hover {
+      transform: scale(1.05);
+    }
+
+    .about-text {
+      flex: 1 1 400px;
+      padding: 20px;
+    }
+
+    .about-text h2 {
+      font-family: 'Great Vibes', cursive;
+      color: #ff7fa7;
+      font-size: 2.3rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .about-text p {
+      text-align: justify;
+      line-height: 1.8;
+      font-size: 1.05rem;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .quote {
+      font-style: italic;
+      text-align: center;
+      color: #705779;
+      margin-top: 20px;
+    }
+
+    /* =============================== */
+    /* FOOTER */
+    /* =============================== */
+    footer {
+      text-align: center;
+      padding: 15px 10px;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(8px);
+      color: #705779;
+      font-size: 0.95rem;
+      border-top: 2px solid rgba(255, 182, 193, 0.3);
+      position: relative;
+      z-index: 2;
+    }
+
+    footer strong {
+      color: #ff7fa7;
+    }
+
+    /* =============================== */
+    /* RESPONSIF (DISAMAKAN DENGAN PESAN CINTA) */
+    /* =============================== */
+    @media (max-width: 1024px) {
+      .navbar {
+        padding: 15px 30px;
+      }
+
+      .about-container {
+        padding: 30px;
+        margin: 40px 40px 100px;
+      }
+
+      .title {
+        font-size: 2.6rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px 20px;
+      }
+
+      .logo {
+        font-size: 1.7rem;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .title {
+        font-size: 2.3rem;
+        margin-top: 100px;
+      }
+
+      .about-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 25px;
+        margin: 30px 20px 80px;
+      }
+
+      .about-images {
+        flex-direction: row;
+        gap: 15px;
+      }
+
+      .about-images img {
+        width: 160px;
+        height: 160px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .title {
+        font-size: 2rem;
+      }
+
+      .nav-links a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+      }
+
+      .about-container {
+        padding: 20px;
+        margin: 25px 15px 80px;
+      }
+
+      .about-images img {
+        width: 130px;
+        height: 130px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Budi & Elia</div>
+    <div class="nav-links">
+      <a href="index.html">Beranda</a>
+      <a href="galeri.html">Galeri Kenangan</a>
+      <a href="pesan.html">Pesan Cinta</a>
+      <a href="tentang.html" class="active">Tentang Kami</a>
+    </div>
+  </nav>
+
+  <!-- Judul -->
+  <h1 class="title">Tentang Kami</h1>
+
+  <!-- Konten -->
+  <div class="about-container">
+    <div class="about-images">
+      <img src="budi.jpg" alt="Foto Budi">
+      <img src="elia.jpg" alt="Foto Elia">
+    </div>
+
+    <div class="about-text">
+      <h2>Budi & Elia</h2>
+      <p>
+        Kami adalah dua pribadi yang dipertemukan oleh waktu, disatukan oleh rasa, dan dikuatkan oleh kepercayaan.
+        Hubungan ini berawal dari pertemuan tidak sengaja di acara Pekan Raya Jakarta, dan Budi menyukai Elia
+        sejak pandangan pertama dia melihatnya.
+      </p>
+      <p>
+        Budi dikenal sebagai sosok yang tenang, sementara Elia adalah pribadi yang ceria dan penyayang yang membawa
+        warna dalam setiap langkah. Bersama, kami berusaha saling mendukung, memahami, dan tumbuh menuju versi terbaik
+        dari diri kami.
+      </p>
+      <p>
+        Bagi kami, cinta bukan sekadar kata, melainkan tindakan kecil setiap hari yang menunjukkan perhatian,
+        kesabaran, dan ketulusan.
+      </p>
+      <p class="quote">“Sayang, mungkin kita tak sempurna, tapi kita selalu berusaha menjaga satu sama lain dengan
+        sepenuh hati.”</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Dibuat dengan penuh cinta oleh <strong>Budi Utomo</strong> & <strong>Elia Natalia Putri Santoso</strong></p>
+    <p>© 2025 Kisah Kasih Kami | Selamanya Dalam Cinta</p>
+  </footer>
+</body>
+</html>

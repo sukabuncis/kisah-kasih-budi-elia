@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cerita Kita | Budi & Elia 💞</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('love-bg2.jpg') no-repeat center center/cover;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      color: #444;
+    }
+
+    /* Lapisan warna pastel lembut */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 210, 230, 0.7);
+      backdrop-filter: blur(3px);
+      z-index: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(8px);
+      padding: 15px 40px;
+      border-radius: 0 0 20px 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #705779;
+      margin: 0 20px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #ff7fa7;
+    }
+
+    /* Judul Halaman */
+    .title {
+      text-align: center;
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #fff;
+      margin-top: 60px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Konten Cerita */
+    .story-container {
+      max-width: 900px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.75);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+      position: relative;
+      z-index: 2;
+      flex-grow: 1;
+    }
+
+    .story-container h2 {
+      font-family: 'Great Vibes', cursive;
+      color: #ff7fa7;
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+    }
+
+    .story-container p {
+      line-height: 1.8;
+      font-size: 1.05rem;
+      color: #555;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #705779;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px 10px;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(8px);
+      color: #705779;
+      font-size: 0.95rem;
+      border-top: 2px solid rgba(255, 182, 193, 0.3);
+      margin-top: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer strong {
+      color: #ff7fa7;
+    }
+
+    @media (max-width: 768px) {
+      .title {
+        font-size: 2.3rem;
+      }
+      .story-container {
+        padding: 25px;
+        margin: 40px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html">Beranda</a>
+    <a href="galeri.html">Galeri Kenangan</a>
+    <a href="pesan.html">Pesan Cinta</a>
+    <a href="cerita.html">Cerita Kita</a>
+    <a href="tentang.html">Tentang Kami</a>
+  </nav>
+
+  <!-- Judul -->
+  <h1 class="title">Cerita Kita</h1>
+
+  <!-- Isi Cerita -->
+  <div class="story-container">
+    <h2>Awal Sebuah Cerita</h2>
+    <p>
+      Semua bermula dari pertemuan tidak sengaja di acara Pekan Raya Jakarta. Sebuah momen yang membuat budi jatuh cinta pada elia saat pandangan pertama,
+      dan sekarang kami menjalani kisah yang tidak pernah kami bayangkan sebelumnya.
+    </p>
+    <p>
+      Dari percakapan kecil yang hangat, tawa yang tulus, hingga rasa nyaman yang tumbuh tanpa disadari,
+      semuanya berjalan alami dan apa adanya. Tidak ada yang dibuat-buat, hanya dua hati yang saling memahami.
+    </p>
+    <p>
+      Kini, setiap langkah adalah perjalanan bersama. Tidak selalu mudah, tapi selalu bermakna.
+      Kami belajar bahwa cinta sejati bukan hanya tentang perasaan,
+      tapi tentang kesediaan untuk bertumbuh bersama.
+    </p>
+
+    <p class="quote">
+      “Sayang, setiap kisah kita adalah pengingat bahwa cinta bukan kebetulan, tapi pilihan yang kita jaga setiap hari.”
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Dibuat dengan penuh cinta oleh <strong>Budi Utomo</strong> & <strong>Elia Natalia Putri Santoso</strong></p>
+    <p>© 2025 Kisah Kasih Kami | Selamanya Dalam Cinta 💞</p>
+  </footer>
+</body>
+</html>
